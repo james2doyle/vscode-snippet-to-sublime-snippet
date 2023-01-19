@@ -12,12 +12,9 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        sdk: [main]
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1
-        with:
-          sdk: ${{ matrix.sdk }}
       - name: Install dependencies
         run: dart pub get
       - name: Check formatting
