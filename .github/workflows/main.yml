@@ -48,3 +48,8 @@ jobs:
         run: dart pub get
       - name: Build binaries
         run: dart compile exe bin/vscode_snippet_to_sublime_snippet.dart -o converter-${{ matrix.os }}
+      - name: Archive compiled packages
+        uses: actions/upload-artifact@v3
+        with:
+          name: converter-${{ matrix.os }}
+          path: converter-${{ matrix.os }}
