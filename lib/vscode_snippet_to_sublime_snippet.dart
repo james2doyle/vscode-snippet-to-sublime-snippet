@@ -39,7 +39,7 @@ String replaceTemplateVars(Snippet snippet, String source) {
       .replaceFirst("__description__", snippet.description);
 }
 
-///
+/// Takes the JSON data and maps it to Snippet classes
 Map<String, Snippet> parseJsonToSnippet(String snippetContent) {
   const JsonDecoder decoder = JsonDecoder();
   final Map<String, dynamic> mappedSnippets = decoder.convert(snippetContent);
