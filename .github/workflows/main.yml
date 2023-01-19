@@ -44,5 +44,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: ${{ matrix.sdk }}
+      - name: Install dependencies
+        run: dart pub get
       - name: Build binaries
         run: dart compile exe bin/vscode_snippet_to_sublime_snippet.dart -o converter-${{ matrix.os }}
