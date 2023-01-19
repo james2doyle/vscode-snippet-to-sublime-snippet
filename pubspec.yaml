@@ -4,7 +4,7 @@ version: 1.0.0
 repository: https://github.com/james2doyle/vscode-snippet-to-sublime-snippet
 
 environment:
-  sdk: '>=3.0.0-122.0.dev <4.0.0'
+  sdk: '>=3.0.0-114.0.dev <4.0.0'
 
 # Add regular dependencies here.
 dependencies:
