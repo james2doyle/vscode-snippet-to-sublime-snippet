@@ -43,8 +43,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: ${{ matrix.sdk }}
-      - name: Build binaries
-        run: dart compile exe bin/vscode_snippet_to_sublime_snippet.dart -o ${{ matrix.os }}-converter
-        with:
           name: native-executables
           path: build
+      - name: Build binaries
+        run: dart compile exe bin/vscode_snippet_to_sublime_snippet.dart -o ${{ matrix.os }}-converter
