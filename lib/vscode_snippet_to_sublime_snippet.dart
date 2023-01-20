@@ -16,7 +16,7 @@ __content__
 </snippet>
 ''';
 
-/// The snippet represented as a class
+/// The snippet represented as a class.
 class Snippet {
   final String prefix;
   final dynamic body;
@@ -24,7 +24,7 @@ class Snippet {
 
   Snippet(this.prefix, this.body, this.description);
 
-  /// return the body as a formatted string
+  /// Return the body as a formatted string.
   String getBody() {
     return body is List ? body.join("\n") : body;
   }
@@ -51,7 +51,7 @@ Map<String, Snippet> parseJsonToSnippet(String snippetContent) {
   return snippets;
 }
 
-/// Take the template string and write it to the output file returning the path of that new file
+/// Take the template string and write it to the output file returning the path of that new file.
 Future<String> createSnippetFile(String filename, String content,
     [String targetFolder = '']) async {
   String slug = Slugify(filename);
